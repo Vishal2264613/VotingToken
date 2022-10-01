@@ -92,6 +92,7 @@ contract VotingTokens {
     function checkVotesOfCandidates(address _candidate)
         public
         view
+        onlyOwner
         returns (uint)
     {
         require(voteStatus == voting.Open, "Voting is closed now");
